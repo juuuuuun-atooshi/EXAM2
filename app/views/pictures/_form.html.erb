@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@picture) do |p| %>
+  <% if @picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @picture.errors.count %>件のエラーがあります。</h2>
+      <ul>
+        <% @picture.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= p.label :タイトル  %>
+  <%= p.text_field :title, class: 'form-control' %>
+  <br>
+  <%= p.label :内容 %>
+  <%= p.text_field :content, class: 'form-control' %>
+  <br>
+  <%= p.label :アップロードファイル %>
+  <%= photo_img(@picture) if photo_img(@picture) %>
+  <%= p.file_field :image %>
+  <br>
+  <%= p.submit '投稿', class: 'btn btn-primary btn-block' %>
+
+<% end %>
+<%= link_to "投稿一覧に戻る", pictures_path %>

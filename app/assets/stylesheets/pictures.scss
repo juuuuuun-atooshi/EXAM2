@@ -1,0 +1,36 @@
+.picture-frame-side {
+    padding: 10px ;
+    border: inset 10px #5882FA;
+    background-color: #CEE3F6;
+    .picture-content {
+        text-align: center;
+    }
+    margin-bottom: 10px;
+}
+
+.picture-frame-main {
+    background-color: white;
+    text-align: left;
+    padding: 30px;
+    border-bottom: solid 1px #ccc;
+}
+
+.picture-main {
+    margin-bottom: 20px;
+}
+
+.picture-setting {
+    margin-bottom: 20px;
+}
+
+div {
+    display: block;
+}
+
+div.container {
+    padding-top: 130px;
+}
+
+.img {
+  max-width: 100%;
+}
