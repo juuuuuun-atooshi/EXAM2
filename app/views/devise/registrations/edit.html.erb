@@ -8,7 +8,8 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder:"メールアドレス" %>
+        <%= f.label :メールアドレス %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder:"メールアドレス" %><br />
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,16 +18,11 @@
 
       <% if @user.provider.blank? %>
         <div class="field">
-          <%= f.label :現在のパスワード %><i>(we need your current password to confirm your changes)</i><br />
-          <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-        </div>
-
-        <div class="field"><i>(leave blank if you don't want to change it)</i><br />
           <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder:"新しいパスワード" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder:"新しいパスワード（確認）"  %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder:"新しいパスワード（確認）"  %><br />
         </div>
       <% end %>
 
@@ -43,7 +39,7 @@
 
     <h3>アカウント削除</h3>
     <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "本当に削除してよろしいですか？" }, method: :delete %>
-    <%= link_to "Back", :back %>
+    <%= link_to "戻る", :back %>
 
   </div>
 </div>
