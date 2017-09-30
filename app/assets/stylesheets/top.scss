@@ -2,7 +2,7 @@
 .frame-header {
     header {
         width: 100%;
-        background-color: #2c3e50;
+        background-color: #770000;
         height: 54px;
     }
 
@@ -106,14 +106,22 @@ div#text_top {
     margin-top: 200px;
 }
 
-.frame-footer {
-    footer {
-        display: block;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        margin: auto;
-    }
+.main-header {
+  width: 100%;
+}
+.main-header img {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.frame-footer footer {
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0 0 0;
 }
 
 html {
@@ -124,4 +132,8 @@ html {
 body {
     text-align: center;
     background-color: #E6E6E6;
+}
+
+.container {
+  padding-top: 130px;
 }
